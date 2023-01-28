@@ -23,7 +23,7 @@ testfav();
 fav_two.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON') {
         clear();
-        e.target.parentElement.parentElement.remove();
+        e.target.parentElement.parentElement.parentElement.remove();
         
     }
 })
