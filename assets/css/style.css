@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
+}
+
+/* leaflet */
+.max {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+/* popup */
+.fav {
+    display: flex;
+    position: absolute;
+    bottom: 20vh;
+    width: 100%;
+}
+
+.size_fav {
+    display: flex;
+    border-radius: 20px;
+    height: 40vh;
+    z-index: 2;
+    width: 100%;
+    background: rgba(201, 240, 252, 0.7);
+}
+
+
+.direct {
+    flex-direction: column;
+}
+
+.size_camera {
+    width: 30vw;
+}
+.size_camera_fav {
+    width: 30vw;
+}
+
+.size_adresse {
+    width: 40vw;
+}
+
+.pos_p {
+    justify-content: center;
+    padding-left: 3rem;
+}
+
+.p_marginbot {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.p_descript {
+    font-size: 1rem;
+}
+
+.p_margin {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.p_margintop {
+    margin-top: 0;
+}
+
+.logo_size {
+    font-size: 4rem;
+    color: black;
+    
+}
+
+.pos_btn {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem 1rem 2rem;
+    font-family: 'Pacifico', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    background-color: #C9F0FC;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.btn:active {
+    transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
+.pos_croix {
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+.logo_padding {
+    padding: 4rem;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #C9F0FC;
+    
+}
+.logo_padding_fav {
+    padding: 4rem;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #C9F0FC;
+    
+}
+
+/* barre map + fav */
+.flex {
+    display: flex;
+}
+
+.pos {
+    justify-content: center;
+    align-items: center;
+    
+}
+.fav_two {
+    width: 100vw;
+    height: 80vh;
+    overflow: auto;
+}
+.margin_fav {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.p_barre {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: black;
+}
+
+.googlefont {
+    font-family: 'Pacifico', sans-serif;
+}
+
+.size_barre {
+    width: 50vw;
+    height: 20vh;
+}
+
+.text_deco {
+    text-decoration: none;
+}
+
+.border {
+    border: solid 1px black;
+}
+
+.color_div {
+    background-color: #C9F0FC;
+    opacity: 0.5;
+}
+
+.barre_opacity:hover {
+    opacity: 1;
+}
+
+/* responcive */
+
+@media screen and (max-width: 1000px) {
+    
+    /* popup */
+    
+    .size_fav {
+        height: 50vh;
+    }
+    
+    .pos_p {
+        padding-left: 2rem;
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    
+    /* popup */
+    
+    .size_fav {
+        height: 80vh;
+    }
+    
+    .pos_p {
+        padding-left: 0;
+    }
+
+    .logo_padding {
+        padding: 3rem;
+    }
+    
+    .btn {
+        font-size: 1rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    
+    .pos_btn {
+        margin-top: 1rem;
+        padding: 1rem 1rem;
+    }
+
+    .pos_croix {
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .p_margin {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 620px){
+
+    .p_barre {
+        display: none;
+    }
+
+    .size_fav {
+        flex-direction: column;
+
+    }
+
+    .logo_padding {
+        padding: 0.5rem;
+    }
+
+    .p_marginbot {
+        font-size: 0.8rem;
+        height: 12vh;
+        width: 95vw;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .p_descript {
+        font-size: 0.8rem;
+        height: 10vh;
+        width: 95vw;
+        margin-left: 0.5rem;
+    }
+
+    .size_camera {
+        order: 1;
+        padding-left: 6rem;
+        padding-top: 1rem;
+    }
+    .size_camera_fav {
+        order: 1;
+        padding-left: 6rem;
+        padding-top: 3rem;
+    }
+    
+    .bout {
+        order: 2;
+        padding-left: 2rem;
+    }
+    .bout_fav {
+        order: 2;
+        padding-left: 4.5rem;
+    }
+
+    .pos_p {
+        order: 3;
+    }
+
+    .barre_bot {
+        order: 4;
+    }
+
+    .logo_padding_fav {
+        padding: 3.5rem;
+        border: solid 1px black;
+        border-radius: 10px;
+        background-color: #C9F0FC;
+        
+    }
+
+    .logo_padding {
+        padding: 2rem;
+    }
+
+}
