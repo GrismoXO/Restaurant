@@ -16,8 +16,8 @@ fetch(url)
         const places = res.records;
         for (let lieu of places) {
             let marker = L.marker(lieu.fields.geolocalisation).addTo(map);
-            //div qui s'affiche quand on clique sur un marqueur avec son écouteur
-            marker.addEventListener("click", () => {
+            //div marqueur avec écouteur
+            marker.on("click", () => {
                 fav.innerHTML = `
                 <div class="size_fav ">
                     <div class="size_camera flex pos center"><i class="fa-solid fa-camera-retro logo_size logo_padding"></i></div>
